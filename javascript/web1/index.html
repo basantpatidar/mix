@@ -1,0 +1,50 @@
+<!-- Author: Basant Patidar 
+Assignment 1 -->
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+<script type="text/javascript"> 
+    function showVid() {
+    var x = document.getElementById("vidTrailer");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script> 
+<title> Assignment 1 </title>
+</head>
+<body>
+    <header>
+        <nav class="sticky">
+            <div class = "row">
+            <ul class="main-nav">
+                <li><a href="#">Thor</a> </li>
+                <li><a href="#">Hulk</a> </li>
+                <li><a href="#">Ironman</a> </li>
+            </ul>
+            </div>
+        </nav>
+        <div class="thanos-text-box">
+            <h1 class="thanos-text">With a finger snap . <br>Thanos wants Grades.</h1>
+            <button class="show-video" id="showVid" onclick="showVid('vidTrailer')" type="button">Show Video</button>
+        </div>
+        <right-section>
+                <video class="vidTrailer" id="vidTrailer" src="vid/vid1.mp4" controls = "controls "></video>
+         </right-section>
+    </header>
+    <div class="section2">
+    <img class="groot" src ="img/groot.gif">
+    <img class="img3" src ="img/img3.jpg">
+    <img class="img3" src ="img/img4.jpg">
+    </div>
+
+    <footer>
+        <h2> This is not the End&nbsp; <i class="fas fa-hourglass-start"></i> </h2>
+    </footer>
+</body>
+</html>
