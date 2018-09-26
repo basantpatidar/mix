@@ -1,0 +1,142 @@
+Sabai_Addon_Content_Entity Object
+(
+    [data] => Array
+        (
+        )
+
+    [_bundleName:protected] => directory_listing
+    [_bundleType:protected] => directory_listing
+    [_properties:protected] => Array
+        (
+            [content_post_user_id] => Sabai_Platform_WordPress_UserIdentity Object
+                (
+                    [_data:protected] => Array
+                        (
+                            [name] => Ada Rating
+                            [email] => SSLLabsRating@gmail.com
+                            [url] => 
+                            [created] => 1509143723
+                            [gravatar] => 1
+                            [gravatar_default] => monsterid
+                            [gravatar_rating] => G
+                            [id] => 445
+                            [username] => Ada Rating
+                            [thumbnail_large] => 
+                            [thumbnail_medium] => 
+                            [thumbnail_small] => 
+                        )
+
+                )
+
+            [content_post_published] => 1510104162
+            [content_post_id] => 20481
+            [content_post_title] => PayPal
+            [content_post_status] => published
+            [content_post_views] => 41
+            [content_post_slug] => paypal
+        )
+
+    [_contentField:protected] => content_body
+    [_contentColumn:protected] => value
+    [_fieldValues:protected] => Array
+        (
+            [directory_claim] => 
+            [content_trashed] => 
+            [content_featured] => 
+            [directory_photos] => 
+            [content_guest_author] => 
+            [field_singleline] => 
+            [directory_contact] => Array
+                (
+                    [0] => Array
+                        (
+                            [phone] => 
+                            [mobile] => 
+                            [fax] => 
+                            [email] => 
+                            [website] => http://www.paypal.com/
+                        )
+
+                )
+
+            [directory_category] => 
+            [directory_location] => Array
+                (
+                    [0] => Array
+                        (
+                            [address] => 2211 N 1st St, San Jose, CA 95131, USA
+                            [street] => 2211 N 1st St
+                            [city] => Santa Clara County
+                            [state] => CA
+                            [zip] => 95131
+                            [country] => US
+                            [zoom] => 10
+                            [lat] => 37.376975
+                            [lng] => -121.922728
+                        )
+
+                )
+
+            [directory_social] => 
+            [content_body] => 
+            [voting_rating] => Array
+                (
+                    [] => Array
+                        (
+                            [count] => 1
+                            [sum] => 0
+                            [average] => 0
+                            [last_voted_at] => 1510104162
+                        )
+
+                )
+
+            [voting_favorite] => 
+            [voting_flag] => 
+            [content_activity] => 
+            [content_children] => 
+            [content_children_count] => Array
+                (
+                    [0] => Array
+                        (
+                            [directory_listing_review] => 1
+                        )
+
+                )
+
+        )
+
+    [_fieldTypes:protected] => Array
+        (
+            [content_post_title] => content_post_title
+            [content_post_status] => content_post_status
+            [content_post_published] => content_post_published
+            [content_post_views] => content_post_views
+            [content_post_id] => content_post_id
+            [content_post_user_id] => content_post_user_id
+            [content_post_entity_bundle_name] => content_post_entity_bundle_name
+            [content_post_entity_bundle_type] => content_post_entity_bundle_type
+            [content_post_slug] => content_post_slug
+            [directory_header_user] => sectionbreak
+            [directory_contact] => directory_contact
+            [directory_social] => directory_social
+            [directory_claim] => directory_claim
+            [directory_photos] => directory_photos
+            [voting_rating] => voting_rating
+            [voting_favorite] => voting_favorite
+            [voting_flag] => voting_flag
+            [content_trashed] => content_trashed
+            [content_activity] => content_activity
+            [content_body] => text
+            [content_featured] => content_featured
+            [content_guest_author] => content_guest_author
+            [content_children] => content_children
+            [content_children_count] => content_children_count
+            [directory_category] => taxonomy_terms
+            [directory_location] => googlemaps_marker
+            [field_singleline] => html
+        )
+
+    [_fieldsLoaded:protected] => 1
+    [_fromCache:protected] => 
+)
