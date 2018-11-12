@@ -1,0 +1,103 @@
+<html>
+    <head>
+            
+<style>
+        canvas { border: 1px solid #ccc}
+    .color-picker{
+        margin-top: 2px;
+    }
+
+</style>
+    </head>
+    <body>
+            
+        
+            <canvas id="c"></canvas><br>
+            <input type="color" class="color-picker">
+            <button id = "penType">Switch Pointer</button>
+        <div class="text">
+        </div>
+        
+            <script type="text/javascript">
+                
+                
+                var penType = 'rectangle';
+                var penTypeID = document.getElementById('penType');
+                var el = document.getElementById('c');
+                var ctx = el.getContext('2d');
+                
+                ctx.lineWidth = 10;
+                //ctx.lineJoin = ctx.lineCap = penType;
+                
+                var isDrawing, points = [ ];
+                
+                el.onmousedown = function(e) {
+                  isDrawing = true;
+                    ctx.lineJoin = ctx.lineCap = penType;
+                  points.push({ x: e.clientX, y: e.clientY });
+                };
+                el.touchstart = function(e) {
+                  isDrawing = true;
+                    ctx.lineJoin = ctx.lineCap = penType;
+                  points.push({ x: e.clientX, y: e.clientY });
+                };
+                
+                el.touchmove = function(e) {
+                  if (!isDrawing) return;
+                
+                  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                  points.push({ x: e.clientX, y: e.clientY });
+                
+                  ctx.beginPath();
+                    console.log(penType);
+                    ctx.lineJoin = ctx.lineCap = penType;
+                  ctx.moveTo(points[0].x, points[0].y);
+                  for (var i = 1; i < points.length; i++) {
+                    ctx.lineTo(points[i].x, points[i].y);
+                  }
+                  ctx.stroke();
+                };
+                
+                el.onmousemove = function(e) {
+                  if (!isDrawing) return;
+                
+                  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                  points.push({ x: e.clientX, y: e.clientY });
+                
+                  ctx.beginPath();
+                    console.log(penType);
+                    ctx.lineJoin = ctx.lineCap = penType;
+                  ctx.moveTo(points[0].x, points[0].y);
+                  for (var i = 1; i < points.length; i++) {
+                    ctx.lineTo(points[i].x, points[i].y);
+                  }
+                  ctx.stroke();
+                };
+                
+                el.touchend = function() {
+                  isDrawing = false;
+                  points.length = 0;
+                }
+                
+                el.onmouseup = function() {
+                  isDrawing = false;
+                  points.length = 0;
+                }
+                const colorPicker = document.querySelector( '.color-picker');
+                colorPicker.addEventListener( 'change', event => {
+                    ctx.strokeStyle = event.target.value; 
+                } );
+                penTypeID.addEventListener('click', function(e){
+                   // console.log('asfsf');
+                    if(penType === 'rectangle')
+                        penType = 'round';
+                        else{
+                        penType = 'rectangle';
+                    }
+                })
+                </script>
+            
+    </body>
+</html>
+
+
