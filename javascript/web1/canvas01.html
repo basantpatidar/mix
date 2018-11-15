@@ -1,0 +1,58 @@
+<html>
+<body>
+    <canvas id="c"></canvas>
+    <script type="text/javascript">
+    window.addEventListener("devicemotion", handleMotionEvent, true);
+        function handleMotionEvent(event){
+            var randomValueFromDeviceX = Math.round(event.accelerationIncludingGravity.x)+100;
+            console.log(randomValueFromDeviceX);
+            var randomValueFromDeviceY = Math.round(event.accelerationIncludingGravity.y)+100;
+            console.log(randomValueFromDeviceX);
+            var canvas = document.getElementById("c"),
+            c = canvas.getContext("2d");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            if(canvas.width > canvas.height){
+                var   squareBlack = canvas.width/3;
+                var   squareWhite = (canvas.width/3)-50;
+            }else{
+                var   squareBlack = canvas.height/2;
+                var   squareWhite = (canvas.height/2)-50;
+                }
+            let midpointX = canvas.width/2;
+            let midpointY = canvas.height/2;
+            var   counter = 1,
+            scaleBlackX = midpointX-squareBlack/2,
+            scaleBlackY = midpointY-squareBlack/2,
+            scaleWhiteX = (midpointX-squareWhite/2),
+            scaleWhiteY = (midpointY-squareWhite/2);
+            c.fillStyle = "grey";
+            c.fillRect(0,0,window.innerWidth,window.innerHeight);
+            c.translate(canvas.width/2, canvas.height/2);
+            c.rotate(45*Math.PI/180);
+            c.translate(-canvas.width/2, -canvas.height/2);
+            c.fillStyle = "black";
+            for (var i = 1; i < 7; i ++) {
+                randomValueFromDeviceX < 97 ?  c.fillStyle = "yellow" :  randomValueFromDeviceX > 103 ? c.fillStyle = "green" : c.fillStyle = "black";
+                
+                c.fillRect(scaleBlackX,scaleBlackY,squareBlack,squareBlack);
+                randomValueFromDeviceY < 97 ?  c.fillStyle = "red" :  randomValueFromDeviceY > 103 ? c.fillStyle = "blue" :
+                c.fillStyle = "white";
+                if(counter<6){
+                    counter ++;
+                    c.fillRect(scaleWhiteX,scaleWhiteY,squareWhite,squareWhite);
+                    squareWhite = squareWhite-100;
+                }
+                squareBlack = squareBlack-100;
+                scaleBlackX = scaleBlackX+50;
+                scaleBlackY = scaleBlackY+50;
+                scaleWhiteX = scaleWhiteX+50;
+                scaleWhiteY = scaleWhiteY+50;
+            }
+            window.requestAnimationFrame(handleMotionEvent);
+        }
+    window.requestAnimationFrame(handleMotionEvent);
+        console.log("Not able to use requestAnimationFrame to access my animation but still my animation is working");
+    </script>
+    </body>
+</html>
