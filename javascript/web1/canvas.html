@@ -1,31 +1,24 @@
 <html>
-    <head>
-            
-<style>
+    <head>      
+     <style>
         canvas { border: 1px solid #ccc}
     .color-picker{
         margin-top: 2px;
     }
 
-</style>
+     </style>
     </head>
     <body>
-            
-        
             <canvas id="c"></canvas><br>
             <input type="color" class="color-picker">
             <button id = "penType">Switch Pointer</button>
         <div class="text">
         </div>
-        
-            <script type="text/javascript">
-                
-                
-                var penType = 'rectangle';
+         <script type="text/javascript">
+               var penType = 'rectangle';
                 var penTypeID = document.getElementById('penType');
                 var el = document.getElementById('c');
                 var ctx = el.getContext('2d');
-                
                 ctx.lineWidth = 10;
                 //ctx.lineJoin = ctx.lineCap = penType;
                 
