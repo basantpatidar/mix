@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+    <ion-content padding>
+        <ion-toolbar>
+  <ion-searchbar>Hit Enter to Search</ion-searchbar>
+</ion-toolbar>
+      <ion-button [href]="'mypage'" color="primary">Assign Part Two</ion-button>
+      <ion-button (click)="toPartOne('/partOne','Home')" color="primary">Go to Part One</ion-button>
+
+    
+
+            <ion-card>
+                <ion-img src="./assets/img3.jpeg"></ion-img>
+          <ion-card-header>
+            Class Discription
+          </ion-card-header>
+
+        <ion-card-content>
+        This is Mobile web deveolopment call and this is assignment on Ionic
+        </ion-card-content>
+        </ion-card>
+    
+</ion-content>
