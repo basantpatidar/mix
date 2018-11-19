@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-input [(ngModel)]="myName" required type="text" placeholder="Enter Name"></ion-input>
+    <ion-button (click)="partOne()" shape="round" color="primary" fill="outline"><ion-icon name="text"></ion-icon>Greetings</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button [href]="'partTwo'" shape="round" color="primary" >Riley</ion-button>
+  </ion-item>
+</ion-content>
