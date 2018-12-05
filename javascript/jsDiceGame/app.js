@@ -1,4 +1,4 @@
-var score, roundScore, activePlayer;
+var score, roundScore, activePlayer, player0, player1;
 score = [0,0];
 activePlayer = 0;
 roundScore = 0;
