@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Song Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card-content>
+    <h1> Album : {{myMusicDetails.Album}}</h1>
+    <h4> Genre : {{myMusicDetails.Genre}}</h4>
+    <h6> Year : {{myMusicDetails.Year}}</h6>
+  </ion-card-content>
+  <ion-button (click)="closeModal()">Close</ion-button>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list #ourList>
+  <ion-item *ngFor=" let s of musicDataService.musicData ">
+  <ion-card (click)="openDetails(s)">
+    <ion-card-header>
+      <ion-card-subtitle>{{s.SongName}}</ion-card-subtitle>
+      <ion-card-title>{{s.Singer}}</ion-card-title>
+    </ion-card-header>
+
+
+  </ion-card>
+  </ion-item>
+</ion-list>
+</ion-content>

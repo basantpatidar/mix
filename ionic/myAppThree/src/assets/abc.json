@@ -1,0 +1,12 @@
+{
+
+  "musicList" : [
+    { "SongName":"Attention", "Singer":"Charlie Puth","Album":"Voicenotes", "Genre":"Funk", "Year":"2018" },
+    { "SongName":"It Ain't me", "Singer":"Selena Gomez","Album":"Stargazing", "Genre":"Synth-pop", "Year":"2017" },
+    { "SongName":"Stay", "Singer":"Zedd","Album":"Everything", "Genre":"NA", "Year":"2017" },
+    { "SongName":"Havana", "Singer":"Camila Cabello","Album":"Camila", "Genre":"pop", "Year":"2018" }
+  ]
+}
+
+
+
