@@ -24,6 +24,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         }
 });
 
+//get Hold buttton functional
 document.querySelector('.btn-hold').addEventListener('click',function(){
     if(gamePlaying){
         // Add CURRENT score to GLOBAL score --
