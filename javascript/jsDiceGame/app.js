@@ -1,9 +1,6 @@
+//Initialize variables
 var score, roundScore, activePlayer, gamePlaying;
 init();
-
-//var x = document.querySelector('#score-0').textContent;
-
-
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
         if(gamePlaying){
@@ -27,12 +24,12 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         }
 });
 
+//get Hold buttton functional
 document.querySelector('.btn-hold').addEventListener('click',function(){
     if(gamePlaying){
         // Add CURRENT score to GLOBAL score --
     scores[activePlayer] += roundScore;
-    
-    //Update the UI
+        //Update the UI
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
     //Check if the player won the Game
     if (scores[activePlayer] >= 100){
