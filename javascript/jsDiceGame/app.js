@@ -13,16 +13,14 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         diceDOM.src = 'dice-' + dice + '.png';
         
         //2.1 If Rolled 6 twice
-
+        //3. If rolled number is not 1 then update the round score
         if(lastScore === dice && lastScore === 6){
             console.log("yes")
             console.log(scores[activePlayer]);
             scores[activePlayer] = 0;
+            document.querySelector('#score-' + activePlayer).textContent = '0';
             nextPlayer();
-        } else{
-
-        //3. If rolled number is not 1 then update the round score
-        if(dice !== 1){
+        } else if(dice !== 1){
             //Add roundScore
             roundScore += dice;
             console.log("RoundScore " + roundScore)
@@ -32,9 +30,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
             nextPlayer();
              }
         }
-}
-lastScore = dice;
-
+    lastScore = dice;
 console.log("lastscore: "+ lastScore)
 });
 
