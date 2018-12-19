@@ -1,5 +1,5 @@
 //Initialize variables
-var scores, roundScore, activePlayer, gamePlaying,lastScore;
+var scores, roundScore, activePlayer, gamePlaying,lastScore, changeTarget;
 init();
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
@@ -34,6 +34,14 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 console.log("lastscore: "+ lastScore)
 });
 
+//Change Target
+document.querySelector('.chg-target').addEventListener('click',function(){
+    changeTarget = 100;
+   changeTarget = document.querySelector('.ip-text').value;
+   console.log(changeTarget);
+
+})
+
 
 //get Hold buttton functional
 document.querySelector('.btn-hold').addEventListener('click',function(){
@@ -43,7 +51,7 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
         //Update the UI
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
     //Check if the player won the Game
-    if (scores[activePlayer] >= 100){
+    if (scores[activePlayer] >= changeTarget){
         document.querySelector('#name-' + activePlayer).textContent = 'winner!';
         document.querySelector('.dice').style.display = 'none';
         document.querySelector('.player-' +activePlayer + '-panel').classList.add('winner');
