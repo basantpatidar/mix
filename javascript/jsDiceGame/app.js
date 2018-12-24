@@ -1,5 +1,5 @@
 //Initialize variables
-var scores, roundScore, activePlayer, gamePlaying,lastScore, changeTarget, playerZero, playerOne;
+var scores, roundScore, activePlayer, gamePlaying,lastScore, changeTarget;
 init();
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
@@ -26,7 +26,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
             console.log("RoundScore " + roundScore)
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         }else{
-            //Next Player One if Zero
+            //Next Player
             nextPlayer();
              }
         }
@@ -88,7 +88,7 @@ document.querySelector('.btn-new').addEventListener('click', init);
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
-
+//Hidding Dice before use
     document.querySelector('.dice').style.display = 'none';
 
 document.getElementById('score-0').textContent = '0';
