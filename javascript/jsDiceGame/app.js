@@ -88,7 +88,7 @@ document.querySelector('.btn-new').addEventListener('click', init);
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
-
+//Hidding Dice before use
     document.querySelector('.dice').style.display = 'none';
 
 document.getElementById('score-0').textContent = '0';
