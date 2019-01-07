@@ -164,6 +164,8 @@ header{
     margin-left: 10%;
     width: 80%;
 }
+
+/* section two */
 .section-two{
     background-color: rgba(255, 255, 255, 0.98);
     height: auto;
@@ -173,6 +175,7 @@ header{
     text-align: center;
     margin: 5px;
 }
+/* section three */
 .section-three{
     background-color: #317EFF;
     height: auto;
