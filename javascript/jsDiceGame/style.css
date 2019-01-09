@@ -152,3 +152,12 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
+/***** Coding Challenge 1.2 ********/
+/******* Button and Input *********/
+.ip-text{
+    align-content: center;
+    margin-left: 25%;
+    margin-bottom: 10px;
+}

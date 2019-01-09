@@ -12,7 +12,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         diceDOM.style.display = 'block';
         diceDOM.src = 'dice-' + dice + '.png';
         
-        //2.1 If Rolled 6 twice
+        //2.1 If Rolled 6 twice --Coding Challenge 3.1
         //3. If rolled number is not 1 then update the round score
         if(lastScore === dice && lastScore === 6){
             console.log("yes")
@@ -34,7 +34,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 console.log("lastscore: "+ lastScore)
 });
 
-//Change Target
+//Change Target  --coding challenge 3.2
 document.querySelector('.chg-target').addEventListener('click',function(){
     changeTarget = 100;
    changeTarget = document.querySelector('.ip-text').value;
