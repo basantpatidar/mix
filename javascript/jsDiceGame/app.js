@@ -5,24 +5,28 @@ init();
 document.querySelector('.btn-roll').addEventListener('click', function(){
         if(gamePlaying){
             //1. Random Number
-        var dice = Math.floor(Math.random() * 6) + 1; 
+        var dice = Math.floor(Math.random() * 6) + 1;
+        var dice1 = Math.floor(Math.random() * 6) + 1;
 
         //2. Display Result
         var diceDOM = document.querySelector('.dice')
         diceDOM.style.display = 'block';
         diceDOM.src = 'dice-' + dice + '.png';
+        var diceDOM1 = document.querySelector('.dice1')
+        diceDOM1.style.display = 'block';
+        diceDOM1.src = 'dice-' + dice1 + '.png';
         
         //2.1 If Rolled 6 twice --Coding Challenge 3.1
         //3. If rolled number is not 1 then update the round score
-        if(lastScore === dice && lastScore === 6){
+        if(lastScore === dice && lastScore === 6 || dice === 1 || dice1 === 1){
             console.log("yes")
             console.log(scores[activePlayer]);
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = '0';
             nextPlayer();
-        } else if(dice !== 1){
+        } else if(dice !== 1 && dice1 !== 1){
             //Add roundScore
-            roundScore += dice;
+            roundScore += dice+dice1;
             console.log("RoundScore " + roundScore)
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         }else{
@@ -81,6 +85,7 @@ function nextPlayer() {
    // document.querySelector('.player-1-panel').classList.add('active');
 
    document.querySelector('.dice').style.display='none';
+   document.querySelector('.dice1').style.display='none';
 }
 document.querySelector('.btn-new').addEventListener('click', init);
  function init(){
@@ -90,6 +95,7 @@ document.querySelector('.btn-new').addEventListener('click', init);
     gamePlaying = true;
 //Hidding Dice before use
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice1').style.display = 'none';
 
 document.getElementById('score-0').textContent = '0';
 document.getElementById('score-1').textContent = '0';
