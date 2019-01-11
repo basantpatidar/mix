@@ -1,3 +1,9 @@
+//Dice game
+//code challenge 1
+//code challenge 2
+//code challenge 3
+
+
 //Initialize variables
 var scores, roundScore, activePlayer, gamePlaying,lastScore, changeTarget;
 init();
