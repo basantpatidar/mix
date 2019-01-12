@@ -1,7 +1,8 @@
 //Dice game
-//code challenge 1
+//code challenge 1 if double six then reset score
 //code challenge 2
-//code challenge 3
+//code challenge 3 
+
 
 
 //Initialize variables
