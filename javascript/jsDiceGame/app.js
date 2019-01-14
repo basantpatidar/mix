@@ -1,6 +1,6 @@
 //Dice game
 //code challenge 1 if double six then reset score
-//code challenge 2
+//code challenge 2 user can change the winning target
 //code challenge 3 get to dice and if get one in both the reset score.
 
 
