@@ -164,7 +164,37 @@ i {
 /***** Coding Challenge 1.2 ********/
 /******* Button and Input *********/
 .ip-text{
-    align-content: center;
-    margin-left: 25%;
-    margin-bottom: 10px;
+    /*align-content: center;*/
+    /*margin-left: 25%;*/
+    /*margin-bottom: 10px;*/
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+
 }
+.ip-text:focus{outline: none;}
+
+.chg-target{
+      /*align-content: center;*/
+      /*margin-left: 25%;*/
+      /*margin-bottom: 10px;*/
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      top: 560px;
+      color: #555;
+      font-size: 18px;
+      font-family: 'Lato';
+      text-align: center;
+      padding: 10px;
+      width: 190px;
+      text-transform: uppercase;
+  }
