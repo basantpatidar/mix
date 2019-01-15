@@ -1,1 +1,1 @@
-# mix
+# Ionic and JavaScript projects
