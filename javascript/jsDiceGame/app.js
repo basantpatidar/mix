@@ -3,12 +3,9 @@
 //code challenge 2 user can change the winning target
 //code challenge 3 get to dice and if get one in both the reset score.
 
-
-
 //Initialize variables
 var scores, roundScore, activePlayer, gamePlaying,lastScore, changeTarget;
 init();
-
 document.querySelector('.btn-roll').addEventListener('click', function(){
         if(gamePlaying){
             //1. Random Number
@@ -50,9 +47,7 @@ document.querySelector('.chg-target').addEventListener('click',function(){
     changeTarget = 100;
    changeTarget = document.querySelector('.ip-text').value;
    console.log(changeTarget);
-
 })
-
 
 //get Hold buttton functional
 document.querySelector('.btn-hold').addEventListener('click',function(){
@@ -68,13 +63,11 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
         document.querySelector('.player-' +activePlayer + '-panel').classList.add('winner');
         document.querySelector('.player-' +activePlayer + '-panel').classList.remove('active');
         gamePlaying = false;
-       
-    }else{
+           }else{
         //Next Player
         nextPlayer();
         }
     }
-    
 });
 
 function nextPlayer() {
@@ -103,7 +96,6 @@ document.querySelector('.btn-new').addEventListener('click', init);
 //Hidding Dice before use
     document.querySelector('.dice').style.display = 'none';
     document.querySelector('.dice1').style.display = 'none';
-
 document.getElementById('score-0').textContent = '0';
 document.getElementById('score-1').textContent = '0';
 document.getElementById('current-0').textContent = '0';
